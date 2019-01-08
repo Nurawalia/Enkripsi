@@ -24,6 +24,7 @@ public class Main extends javax.swing.JFrame {
         int rotaryPos = rotary1.getSelectedIndex();
         String input = inputField.getText().toUpperCase();
         StringBuilder chiper = new StringBuilder(input);
+        
         for(int i=0;i<input.length();i++){
             char temp = input.charAt(i);
             temp += rotaryPos % 26;
