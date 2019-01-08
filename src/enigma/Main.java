@@ -24,12 +24,15 @@ public class Main extends javax.swing.JFrame {
         int rotaryPos = rotary1.getSelectedIndex();
         String input = inputField.getText().toUpperCase();
         StringBuilder chiper = new StringBuilder(input);
+        
         for(int i=0;i<input.length();i++){
+        if ()
             char temp = input.charAt(i);
             temp += rotaryPos % 26;
             chiper.setCharAt(i,temp);
             rotaryPos = (rotaryPos + 1) % 26;
             rotary1.setSelectedIndex(rotaryPos);
+            
         }
         output.setText(chiper.toString());
     }
@@ -39,6 +42,7 @@ public class Main extends javax.swing.JFrame {
        String input = inputField.getText();
        StringBuilder plainText = new StringBuilder(input.toUpperCase());
        for(int i = 0; i < input.length();i++){
+           if ()
            char temp = input.charAt(i);
            temp -= rotaryPos % 26;
            plainText.setCharAt(i,temp);
